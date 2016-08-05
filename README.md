@@ -515,6 +515,8 @@ The autocomplete component triggers the following custom events.
   arguments: the jQuery event object, the suggestion object, and the name of 
   the dataset the suggestion belongs to.
 
+* `autocomplete:cursorremoved` – Triggered when the dropdown menu cursor is removed from the dropdown
+
 * `autocomplete:selected` – Triggered when a suggestion from the dropdown menu is 
   selected. The event handler will be invoked with 3 arguments: the jQuery 
   event object, the suggestion object, and the name of the dataset the 

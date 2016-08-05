@@ -108,7 +108,7 @@ _.mixin(Dropdown.prototype, EventEmitter, {
       }
     }
     this._removeCursor();
-    this.trigger('cursorRemoved');
+    this.trigger('cursorremoved');
   },
 
   _onRendered: function onRendered(e, query) {
@@ -200,7 +200,7 @@ _.mixin(Dropdown.prototype, EventEmitter, {
     newCursorIndex = (newCursorIndex + 1) % ($suggestions.length + 1) - 1;
 
     if (newCursorIndex === -1) {
-      this.trigger('cursorRemoved');
+      this.trigger('cursorremoved');
 
       return;
     } else if (newCursorIndex < -1) {

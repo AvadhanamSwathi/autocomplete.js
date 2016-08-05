@@ -112,9 +112,9 @@ describe('Typeahead', function() {
     });
   });
 
-  describe('when dropdown triggers cursorRemoved', function() {
+  describe('when dropdown triggers cursorremoved', function() {
     it('should reset the input value', function() {
-      this.dropdown.trigger('cursorRemoved');
+      this.dropdown.trigger('cursorremoved');
 
       expect(this.input.resetInputValue).toHaveBeenCalled();
     });
@@ -125,7 +125,7 @@ describe('Typeahead', function() {
       this.input.hasOverflow.and.returnValue(false);
       this.input.getInputValue.and.returnValue(testDatum.value.slice(0, 2));
 
-      this.dropdown.trigger('cursorRemoved');
+      this.dropdown.trigger('cursorremoved');
 
       expect(this.input.setHint).toHaveBeenCalledWith(testDatum.value);
     });

@@ -66,7 +66,7 @@ function Typeahead(o) {
   this.dropdown = new Typeahead.Dropdown({menu: $menu, datasets: o.datasets, templates: o.templates, cssClasses: this.cssClasses, minLength: this.minLength})
     .onSync('suggestionClicked', this._onSuggestionClicked, this)
     .onSync('cursorMoved', this._onCursorMoved, this)
-    .onSync('cursorRemoved', this._onCursorRemoved, this)
+    .onSync('cursorremoved', this._onCursorRemoved, this)
     .onSync('opened', this._onOpened, this)
     .onSync('closed', this._onClosed, this)
     .onSync('shown', this._onShown, this)
@@ -149,6 +149,7 @@ _.mixin(Typeahead.prototype, {
   _onCursorRemoved: function onCursorRemoved() {
     this.input.resetInputValue();
     this._updateHint();
+    this.eventBus.trigger('cursorremoved');
   },
 
   _onDatasetRendered: function onDatasetRendered() {
